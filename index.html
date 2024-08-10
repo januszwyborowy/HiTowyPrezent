@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gratulacje! Jesteś naszym 1000. odwiedzającym!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffcc00;
+            margin: 0;
+        }
+        .popup {
+            background: white;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            text-align: center;
+            max-width: 90%;
+            width: 400px; /* Ustalamy maksymalną szerokość */
+            border: 2px solid red;
+            animation: shake 2s infinite;
+            box-sizing: border-box;
+        }
+        .popup h1 {
+            color: red;
+            font-size: 1.5em;
+            animation: blink 1s infinite;
+            margin: 0 0 10px;
+        }
+        .popup p {
+            margin: 10px 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .popup a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            animation: pulse 1s infinite;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .popup a:hover {
+            background-color: darkred;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        @keyframes colorChange {
+            0% { color: red; }
+            50% { color: yellow; }
+            100% { color: red; }
+        }
+        .email-highlight {
+            color: red;
+            font-size: 1.2em;
+            font-weight: bold;
+            background-color: yellow;
+            padding: 5px;
+            border: 2px dashed red;
+            display: inline-block;
+            animation: colorChange 1s infinite;
+            margin-top: 10px;
+        }
+        /* Media Queries for smaller screens */
+        @media (max-width: 600px) {
+            .popup {
+                width: 90%;
+                padding: 10px;
+            }
+            .popup h1 {
+                font-size: 1.2em;
+            }
+            .popup p {
+                font-size: 0.9em;
+            }
+            .popup a {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+            .email-highlight {
+                font-size: 1em;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <h1>GRATULACJE! JESTEŚ NASZYM 1000. ODWIEDZAJĄCYM!</h1>
+        <p>ZYSKUJESZ DARMOWĄ KSIĄŻKĘ! TO NIEPOWTARZALNA OKAZJA, KTÓREJ NIE MOŻESZ PRZEGAPIĆ!!!</p>
+        <p>ABY ODEBRAĆ SWOJĄ DARMOWĄ KSIĄŻKĘ, WYKONAJ KILKA PROSTYCH KROKÓW:</p>
+        <ol>
+            <li>KLIKNIJ W PONIŻSZY LINK:</li>
+            <a id="claimLink" href="https://example.com/odbierz-ksiazke">ODBIERZ DARMOWĄ KSIĄŻKĘ</a>
+            <li>WYBIERZ KSIĄŻKĘ Z NASZEJ STRONY.</li>
+            <li>WYŚLIJ WYBRANĄ KSIĄŻKĘ NA PODANY PONIŻEJ ADRES EMAIL ORAZ KILKA ZDAŃ, DLACZEGO WYBRAŁEŚ TĘ KSIĄŻKĘ.</li>
+        </ol>
+        <p><strong>ADRES EMAIL:</strong></p>
+        <div class="email-highlight">twojemail@example.com</div>
+
+        <p><span style="color: red; font-weight: bold;">DLACZEGO WARTO? NASZA OFERTA OBEJMUJE NAJNOWSZE BESTSELLERY ORAZ KLASYCZNE TYTUŁY, KTÓRE KAŻDY MIŁOŚNIK KSIĄŻEK MUSI MIEĆ W SWOJEJ KOLEKCJI. NIE PRZEGAP TEJ WYJĄTKOWEJ OKAZJI, ABY WZBOGACIĆ SWOJĄ BIBLIOTECZKĘ!</span></p>
+        <p><strong>UWAGA:</strong> OFERTA JEST OGRANICZONA CZASOWO! PROSIMY O SKORZYSTANIE Z NIEJ DO KOŃCA TYGODNIA, ABY NIE STRACIĆ SWOJEJ SZANSY NA DARMOWĄ KSIĄŻKĘ.</p>
+        <p>Z POZDROWIENIAMI,</p>
+        <p>ZESPÓŁ DOBREJ ZABAWY</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                alert('GRATULACJE! JESTEŚ NASZYM 1000. ODWIEDZAJĄCYM! ZYSKUJESZ DARMOWĄ KSIĄŻKĘ!!!');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
 
