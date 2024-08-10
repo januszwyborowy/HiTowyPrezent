@@ -16,36 +16,38 @@
         }
         .popup {
             background: white;
-            padding: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
             text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-            border: 3px solid red;
+            max-width: 90%;
+            width: 400px; /* Ustalamy maksymalną szerokość */
+            border: 2px solid red;
             animation: shake 2s infinite;
+            box-sizing: border-box;
         }
         .popup h1 {
             color: red;
-            font-size: 2em;
+            font-size: 1.5em;
             animation: blink 1s infinite;
+            margin: 0 0 10px;
         }
         .popup p {
-            margin: 15px 0;
-            font-size: 1.2em;
+            margin: 10px 0;
+            font-size: 1em;
             color: #333;
         }
         .popup a {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 10px 20px;
             background-color: red;
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 1.2em;
+            font-size: 1em;
             animation: pulse 1s infinite;
             cursor: pointer;
-            margin-top: 10px; /* Dodane, aby dodać odstęp nad przyciskiem */
+            margin-top: 10px;
         }
         .popup a:hover {
             background-color: darkred;
@@ -80,14 +82,35 @@
         }
         .email-highlight {
             color: red;
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-weight: bold;
             background-color: yellow;
-            padding: 10px;
-            border: 3px dashed red;
+            padding: 5px;
+            border: 2px dashed red;
             display: inline-block;
             animation: colorChange 1s infinite;
             margin-top: 10px;
+        }
+        /* Media Queries for smaller screens */
+        @media (max-width: 600px) {
+            .popup {
+                width: 90%;
+                padding: 10px;
+            }
+            .popup h1 {
+                font-size: 1.2em;
+            }
+            .popup p {
+                font-size: 0.9em;
+            }
+            .popup a {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+            .email-highlight {
+                font-size: 1em;
+                padding: 5px;
+            }
         }
     </style>
 </head>
@@ -98,12 +121,12 @@
         <p>ABY ODEBRAĆ SWOJĄ DARMOWĄ KSIĄŻKĘ, WYKONAJ KILKA PROSTYCH KROKÓW:</p>
         <ol>
             <li>KLIKNIJ W PONIŻSZY LINK:</li>
-            <a id="claimLink" href="https://zysk.com.pl/">ODBIERZ DARMOWĄ KSIĄŻKĘ</a>
+            <a id="claimLink" href="https://example.com/odbierz-ksiazke">ODBIERZ DARMOWĄ KSIĄŻKĘ</a>
             <li>WYBIERZ KSIĄŻKĘ Z NASZEJ STRONY.</li>
             <li>WYŚLIJ WYBRANĄ KSIĄŻKĘ NA PODANY PONIŻEJ ADRES EMAIL ORAZ KILKA ZDAŃ, DLACZEGO WYBRAŁEŚ TĘ KSIĄŻKĘ.</li>
         </ol>
         <p><strong>ADRES EMAIL:</strong></p>
-        <div class="email-highlight">janusz.wyborowy12@gmail.com</div>
+        <div class="email-highlight">twojemail@example.com</div>
 
         <p><span style="color: red; font-weight: bold;">DLACZEGO WARTO? NASZA OFERTA OBEJMUJE NAJNOWSZE BESTSELLERY ORAZ KLASYCZNE TYTUŁY, KTÓRE KAŻDY MIŁOŚNIK KSIĄŻEK MUSI MIEĆ W SWOJEJ KOLEKCJI. NIE PRZEGAP TEJ WYJĄTKOWEJ OKAZJI, ABY WZBOGACIĆ SWOJĄ BIBLIOTECZKĘ!</span></p>
         <p><strong>UWAGA:</strong> OFERTA JEST OGRANICZONA CZASOWO! PROSIMY O SKORZYSTANIE Z NIEJ DO KOŃCA TYGODNIA, ABY NIE STRACIĆ SWOJEJ SZANSY NA DARMOWĄ KSIĄŻKĘ.</p>
